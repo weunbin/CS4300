@@ -1,0 +1,69 @@
+/* overall page*/
+html{
+    background-color: white;
+}
+/*body style*/
+body{
+    background-color: white;
+    color: #404040;
+    font-size: 11pt;
+    font-family: Georgia, Garamond, serif;
+    background-image:url("https://webster.cs.washington.edu/images/silverware.jpg");
+    background-repeat: repeat;
+    background-attachment:fixed;
+}
+
+/* unordered list*/
+ul{
+    list-style-image: url("https://webster.cs.washington.edu/images/pie-icon.gif")
+}
+
+/*links*/
+a{
+    color: #A4A400;
+    text-decoration: underline;
+}
+
+/*strike through cake*/
+#cake{
+    text-decoration: line-through;
+}
+
+/*preformatted style for copyrights*/
+pre{
+    text-align: left;
+    font-family: monospace;
+}
+
+/*style for comments*/
+blockquote{
+    font-style: italic;
+    background-color: #FFFFA8;
+}
+
+h1 span{
+    display: inline;
+    background-color: #F0F0F0;
+}
+
+/*main header*/
+.main{
+    color: #A4A400;
+    font-family:"Lucida Sans Unicode",Helvertica,Arial,sans-serif;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 22pt;
+    font-weight: bold;
+    letter-spacing:0.25em;
+}
+
+/*other headers*/
+.header{
+    color: #A4A400;
+    font-family:"Lucida Sans Unicode",Helvertica,Arial,sans-serif;
+    text-decoration: underline;
+    text-align: left;
+    font-size: 18pt;
+    font-weight: normal;
+    letter-spacing:0.25em;
+}

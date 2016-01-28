@@ -1,0 +1,40 @@
+html{
+    background-color:white;
+}
+#header {
+        background-color:maroon;
+        color:white;
+        font-family:courier new;
+        font-size:110%;
+        padding:5px;
+}
+#nav {
+        line-height:25px;
+        background-color:whitesmoke;
+        font-family:courier new;
+        height:420px;
+        width:8%;
+        float:left;
+        padding:5px;          
+}
+#section {
+        background-image:url("https://webster.cs.washington.edu/images/silverware.jpg");
+        background-attachment:fixed;
+        width:90%;
+        height:420px;
+        float:left;
+        padding:5px;
+}
+#footer {
+        font-family:courier new;
+        font-size:110%;
+        background-color:maroon;
+        color:white;
+        clear:both;
+        height:50px;
+        text-align:left;
+        padding:8px;
+}
+ul{
+    list-style-image: url("https://webster.cs.washington.edu/images/pie-icon.gif")
+}

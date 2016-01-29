@@ -2,6 +2,7 @@ html{
     background-color:white;
 }
 #header {
+        text-align:center;
         background-color:maroon;
         color:white;
         font-family:courier new;

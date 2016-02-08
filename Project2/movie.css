@@ -31,9 +31,20 @@ h1{
 #rotten{
     float: left;
     text-weight: bold;
+    text-align: left;
     color: red;
+    margin: auto;
+    height: 83px;
     font-size: 48px;
+    padding: 0px;
+    width: 550px;
     background-image: url("rottenlargebg.png");
+}
+
+#percent{
+    float: left;
+    font-size: 48px;
+    color: red;
 }
 
 #overview{

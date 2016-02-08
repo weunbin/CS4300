@@ -1,11 +1,9 @@
 /* overall page*/
 html{
-    background-color: white;
+    background-image: url("moviebg.png");
 }
 /*body style*/
 body{
-    background-color: white;
-    background-image: url("moviebg.png");
     font-size: 8pt;
     font-family: Verdana, Tahoma, sans-serif;
     margin: 0px;
@@ -17,36 +15,81 @@ h1{
     font-size: 24pt;
     font-weight: bold;
     text-shadow: 3px 3px #999999;
+    margin-top: 72px;
+}
+
+dt{
+    text-indent: 10pt;
+    font-family: Arial, sans-serif;
+    font-size: 8pt;
+    font-weight: bold;
+    text-align: left;
+    padding-top: 10pt;
+}
+
+dd{
+    font-family: Arial, sans-serif;
+    font-size: 8pt;
+    text-align: left;
+    padding-left: 10pt;
+}
+
+ul{
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+#align{
+    vertical-align: middle;
+    font-size: 48pt;
+    font-weight: bold;
+    color: red;
+}
+
+#signs{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+#half{
+    opacity: 0.5;
+}
+
+#half:hover{
+    opacity: 1;
+}
+
+#outof{
+    font-size: 8pt;
+    color: white;
+    padding: 0px;
+}
+
+#topleft{
+    vertical-align: middle;
+    border-top-left-radius: 15px;
+}
+
+#topright{
+    border-top-right-radius: 15px;
 }
 
 #banner{
     background-image: url("rancidbannerbg.png");
-    background-repeat: repeat;
+    position: fixed;
+    top: 0;
     width: 100%;
     height: 50px;
     margin: 0px;
     padding: 0px;
 }
 
-#rottenlarge{
-    text-align: center;
-    margin: auto;
-    height: 83px;
-    font-size: 48px;
-    width: 550px;
-    background-image: url("rottenlargebg.png");
-}
-
 #left{
+    border-top-left-radius: 15px;
     float: left;
     width: 550px;
     background-image: url("moviebg.png");
-}
-
-#percent{
-    float: left;
-    font-size: 48px;
-    color: red;
 }
 
 #overview{
@@ -69,12 +112,32 @@ h1{
     
 }
 
+#general{
+    background-color: #A2B964;
+    float: left;
+    width: 250px;
+}
 
 #critic{
     text-align: left;
 }
 
+#last{
+    text-align: center;
+}
+
+.rottenbg{
+    border-top-left-radius: 15px;
+    text-align: left;
+    height: 83px;
+    float: left;
+    padding: 0px;
+    width: 550px;
+    background-image: url("rottenlargebg.png");
+}
+
 .columns{
+    border-top-left-radius: 15px;
     width: 50%;
     float: left;
 }
@@ -87,7 +150,7 @@ h1{
 .overall{
     margin: auto;
     width: 800px;
-    height: 100%;
+    height: auto;
     border-style: solid;
     border-width: 4px;
     border-color: gray;

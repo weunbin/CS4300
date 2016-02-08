@@ -40,8 +40,6 @@ h1{
 #left{
     float: left;
     width: 550px;
-    margin: 0;
-    padding: 0;
     background-image: url("moviebg.png");
 }
 
@@ -63,7 +61,9 @@ h1{
     border-width: 2px;
     border-color: gray;
     padding: 8px;
+    text-align: left;
     border-radius: 10px;
+    margin: 20pt;
 }
 
 #critic{
@@ -75,7 +75,10 @@ h1{
     float: left;
 }
 
-
+.images{
+    padding: 5px;
+    float: left;
+}
 
 .overall{
     margin: auto;

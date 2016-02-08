@@ -5,23 +5,27 @@
 
 		<meta charset="utf-8" />
 		<link href="movie.css" type="text/css" rel="stylesheet" />
+		<link rel="icon" type="image/png" href="rotten.gif">
 	</head>
 
 	<body>
 		<div id="banner">
-			<img src="rancidbanner.png" alt="Rancid Tomatoes" />
+			<div id="bannerbg">
+				<img src="rancidbanner.png" alt="Rancid Tomatoes" />
+			</div>
 		</div>
 
 		<h1>TMNT (2007)</h1>
 			
 		<div class="overall">	
 			<div id="overview">
-				<img src="overview.png" alt="general overview" />
+				<img id="topright" src="overview.png" alt="general overview" />
 			</div>
 			
 			<div id="left">
-				<div id ="rottenlarge">
-					<img src="rottenlarge.png" alt="Rotten" />
+				<div class="rottenbg">
+						<img id="topleft" src="rottenlarge.png" alt="Rotten" />
+						<span id="align">33</span> <span id="outof"> % (out of 88 reviews) </span>
 				</div>
 				<div class = "columns">
 					<p id ="review">
@@ -46,7 +50,7 @@
 			
 					<p id ="review">
 						<img class="images" src="rotten.gif" alt="Rotten" />
-						<q>It stinks!</q>
+						<q>It stinks!</q> <br /> &nbsp
 					</p>
 					<p id ="critic">
 						<img class="images" src="critic.gif" alt="Critic" />
@@ -65,12 +69,12 @@
 			
 					<p id ="review">
 						<img class="images" src="rotten.gif" alt="Rotten" />
-						<q>YOUR REVIEW HERE</q>
+						<q>A decent tale of the struggles of pubescent adolescents. These boys struggle with their identity and create a wonderful imaginary world shown to us in their eyes. There have been better things to do as teens then to pretend being turtle ninjas.</q>
 					</p>
 					<p id ="critic">
 						<img class="images" src="critic.gif" alt="Critic" />
-						NAME <br />
-						PUBLICATION
+						Noch Ildhood <br />
+						BNS Reviews
 					</p>
 				</div>
 				<div class = "columns">
@@ -116,60 +120,70 @@
 			
 					<p id ="review">
 						<img class="images" src="rotten.gif" alt="Rotten" />
-						<q>YOUR REVIEW HERE</q>
+						<q>This movie was everything that would disappoint a fan. The worrying dread of an inaccurate representation of the TMNT that fans remember has been actualized.</q>
 					</p>
 					<p id ="critic">
 						<img class="images" src="critic.gif" alt="Critic" />
-						NAME <br />
-						PUBLICATION
+						Franklin Farber<br />
+						Real Eyes Realize
 					</p>
 				</div>
 			</div>
+			<div id="general">
+				<dl>
+					<dt>STARRING</dt>
+					<dd>Patrick Stewart <br /> Mako <br /> Sarah Michelle Gellar <br /> Kevin Smith</dd>
 			
-			<dl>
-				<dt>STARRING</dt>
-				<dd>Patrick Stewart <br /> Mako <br /> Sarah Michelle Gellar <br /> Kevin Smith</dd>
-		
-				<dt>DIRECTOR</dt>
-				<dd>Kevin Munroe</dd>
-		
-				<dt>RATING</dt>
-				<dd>PG</dd>
-		
-				<dt>THEATRICAL RELEASE</dt>
-				<dd>Mar 23, 2007</dd>
-		
-				<dt>MOVIE SYNOPSIS</dt>
-				<dd>After the defeat of their old arch nemesis, The Shredder, the Turtles have grown apart as a family.</dd>
-		
-				<dt>MPAA RATING</dt>
-				<dd>PG, for animated action violence, some scary cartoon images and mild language</dd>
-		
-				<dt>RELEASE COMPANY</dt>
-				<dd>Warner Bros.</dd>
-		
-				<dt>RUNTIME</dt>
-				<dd>90 mins</dd>
-		
-				<dt>GENRE</dt>
-				<dd>Action/Adventure, Comedies, Childrens, Martial Arts, Superheroes, Ninjas, Animated Characters</dd>
-		
-				<dt>BOX OFFICE</dt>
-				<dd>$54,132,596</dd>
-		
-				<dt>LINKS</dt>
-				<dd>
-					<ul>
-						<li><a href="http://www.ninjaturtles.com/">The Official TMNT Site</a></li>
-						<li><a href="http://www.rottentomatoes.com/m/teenage_mutant_ninja_turtles/">RT Review</a></li>
-						<li><a href="http://www.rottentomatoes.com/">RT Home</a></li>
-					</ul>
+					<dt>DIRECTOR</dt>
+					<dd>Kevin Munroe</dd>
+			
+					<dt>RATING</dt>
+					<dd>PG</dd>
+			
+					<dt>THEATRICAL RELEASE</dt>
+					<dd>Mar 23, 2007</dd>
+			
+					<dt>MOVIE SYNOPSIS</dt>
+					<dd>After the defeat of their old arch nemesis, The Shredder, the Turtles have grown apart as a family.</dd>
+			
+					<dt>MPAA RATING</dt>
+					<dd>PG, for animated action violence, some scary cartoon images and mild language</dd>
+			
+					<dt>RELEASE COMPANY</dt>
+					<dd>Warner Bros.</dd>
+			
+					<dt>RUNTIME</dt>
+					<dd>90 mins</dd>
+			
+					<dt>GENRE</dt>
+					<dd>Action/Adventure, Comedies, Childrens, Martial Arts, Superheroes, Ninjas, Animated Characters</dd>
+			
+					<dt>BOX OFFICE</dt>
+					<dd>$54,132,596</dd>
+			
+					<dt>LINKS</dt>
+					<dd>
+						<ul>
+							<li><a href="http://www.ninjaturtles.com/">The Official TMNT Site</a></li>
+							<li><a href="http://www.rottentomatoes.com/m/teenage_mutant_ninja_turtles/">RT Review</a></li>
+							<li><a href="http://www.rottentomatoes.com/">RT Home</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+			<dt>
+				<dd id="last">
+					(1-10) of 88
 				</dd>
-			</dl>
+			</dt>
 		</div>
-		<div>
-			<a href="validate-html.php"><img src="w3c-html.png" alt="Valid HTML5" /></a><br />
-			<a href="validate-css.php"><img src="w3c-css.png" alt="Valid CSS" /></a>
+		<div id="signs">
+			<div id="half">
+				<a href="validate-html.php"><img src="w3c-html.png" alt="Valid HTML5" /></a><br />
+			</div>
+			<div id="half">
+				<a href="validate-css.php"><img src="w3c-css.png" alt="Valid CSS" /></a>
+			</div>
 		</div>
 	</body>
 </html>

@@ -60,19 +60,13 @@ ul{
     opacity: 1;
 }
 
-#outof{
-    font-size: 8pt;
-    color: white;
-    padding: 0px;
-}
-
 #topleft{
     vertical-align: middle;
-    border-top-left-radius: 15px;
+    border-top-left-radius: 16px;
 }
 
 #topright{
-    border-top-right-radius: 15px;
+    border-top-right-radius: 16px;
 }
 
 #banner{
@@ -86,7 +80,7 @@ ul{
 }
 
 #left{
-    border-top-left-radius: 15px;
+    border-top-left-radius: 16px;
     float: left;
     width: 550px;
     background-image: url("moviebg.png");
@@ -94,6 +88,8 @@ ul{
 
 #overview{
     float: right;
+    margin: 0px;
+    padding: 0px;
 }
 
 #review{
@@ -114,8 +110,10 @@ ul{
 
 #general{
     background-color: #A2B964;
-    float: left;
+    float: right;
     width: 250px;
+    margin: 0px;
+    padding: 0px;
 }
 
 #critic{
@@ -124,12 +122,19 @@ ul{
 
 #last{
     text-align: center;
+    clear: both;
+    padding: 5px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    background-color: #A2B964;
 }
 
 .rottenbg{
-    border-top-left-radius: 15px;
+    border-top-left-radius: 16px;
     text-align: left;
     height: 83px;
+    font-size: 8pt;
+    color: white;
     float: left;
     padding: 0px;
     width: 550px;
@@ -137,7 +142,7 @@ ul{
 }
 
 .columns{
-    border-top-left-radius: 15px;
+    border-top-left-radius: 16px;
     width: 50%;
     float: left;
 }
@@ -154,6 +159,5 @@ ul{
     border-style: solid;
     border-width: 4px;
     border-color: gray;
-    background-color: #A2B964;
     border-radius: 20px;
 }

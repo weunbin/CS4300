@@ -28,17 +28,21 @@ h1{
     padding: 0px;
 }
 
-#rotten{
-    float: left;
-    text-weight: bold;
-    text-align: left;
-    color: red;
+#rottenlarge{
+    text-align: center;
     margin: auto;
     height: 83px;
     font-size: 48px;
-    padding: 0px;
     width: 550px;
     background-image: url("rottenlargebg.png");
+}
+
+#left{
+    float: left;
+    width: 550px;
+    margin: 0;
+    padding: 0;
+    background-image: url("moviebg.png");
 }
 
 #percent{
@@ -51,6 +55,28 @@ h1{
     float: right;
 }
 
+#review{
+    font-size: 8pt;
+    font-weight: bold;
+    background-color: #E8DC9B;
+    border-style: solid;
+    border-width: 2px;
+    border-color: gray;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+#critic{
+    
+}
+
+.columns{
+    width: 50%;
+    float: left;
+}
+
+
+
 .overall{
     margin: auto;
     width: 800px;
@@ -58,4 +84,5 @@ h1{
     border-style: solid;
     border-width: 4px;
     border-color: gray;
+    background-color: #A2B964;
 }

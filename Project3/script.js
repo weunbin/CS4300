@@ -56,16 +56,22 @@ function autoCompleteZipcode(){
     }
     
     csvFile.send(null);
+    var notFound = true;
     var citySelected = document.getElementById('city');
     var selectedCity = citySelected.value;
     var zipCodeoptions = '';
     var getCity = 0;
     for(var q = 0; q < cityArray.length; q++){
-        if(selectedCity == cityArray[q])
+        if(selectedCity == cityArray[q]){
             getCity = q;
+            notFound = false;
+        }
     }
     for(var n = 0; n < zipcodeArray[getCity].length; n++){
+        if(!notFound)
             zipCodeoptions += '<option value="'+zipcodeArray[getCity][n]+'">' + zipcodeArray[getCity][n] +'</option>';
+        else
+            zipCodeoptions += '<option value="not found">not found</option>';
     }
     document.getElementById('zipcodes').innerHTML = zipCodeoptions;
     

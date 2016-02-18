@@ -21,7 +21,7 @@ function phone() {
 }
 
 function autoCompleteZipcode(){
-       var textArray = [];
+    var textArray = [];
     var cityArray = [];
     var zipcodeArray = [];
     var tempArray = [];
@@ -68,7 +68,9 @@ function autoCompleteZipcode(){
             zipCodeoptions += '<option value="'+zipcodeArray[getCity][n]+'">' + zipcodeArray[getCity][n] +'</option>';
     }
     document.getElementById('zipcodes').innerHTML = zipCodeoptions;
-
+    
+    
+    
 }
 
 
@@ -137,12 +139,6 @@ function autoCompleteCity(){
                     for(j = 0; j < textArray[i].length; i++){
                         tempArray = textArray[i].split(",");
                         cityArray[i] = tempArray[0];
-                        var zipcodeLength = tempArray.length - 1;
-                        zipcodeArray[i] = new Array(zipcodeLength);
-                        for(k = 0; k < zipcodeLength; k++){
-                            zipcodeArray[i][k] = tempArray[k+1];
-                            zipcodeArray[i][k] = zipcodeArray[i][k].replace(/[\r\n]/,'');
-                        }
                     }
                 }
             }
@@ -155,8 +151,6 @@ function autoCompleteCity(){
         options += '<option value="'+cityArray[o]+'">';
     }
     document.getElementById('cities').innerHTML = options;
-
-    
-                                    
+                        
 }
 

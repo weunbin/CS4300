@@ -21,11 +21,11 @@
         </p>
         <p>
           <label>City</label>
-            <input type="text" id="city" list ="cities" onfocus="autoComplete()" onblur="alertCity()"/>
+            <input type="text" id="city" list ="cities" onkeyup="autoCompleteCity()" onblur="alertCity()" onblur="autoCompleteZipcode()"/>
             <datalist id ="cities">
             </datalist>
           <label>Zip code</label>
-            <select id ="zipcodes" onfocus ="autoComplete()"></select>
+            <select id ="zipcodes"></select>
         </p>
         <p>
           <input type="submit">"Share personal info with unscrupulous marketing staff"

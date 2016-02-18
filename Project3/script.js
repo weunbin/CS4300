@@ -10,9 +10,10 @@ function capitalLast() {
 
 function phone() {
     var input = document.getElementById("telephone");
-    var regex = new RegExp("(\D\d{3}\D\d{3}\D\d{4})");
-    var regex2 = new RegExp("(\d{3}\D\d{3}\D\d{4})");
+    var regex = /^(\D{1}[0-9]{3}\D{1}[0-9]{3}\D{1}[0-9]{4})$/;
+    var regex2 = /^([0-9]{3}\D{1}[0-9]{3}\D{1}[0-9]{4})$/;
     if (!regex.test(input.value) && !regex2.test(input.value)) {
         alert("Incorrect Format: <something>ddd<something>ddd<something>dddd");
+        input.value = "";
     }
 }

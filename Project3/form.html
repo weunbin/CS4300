@@ -5,14 +5,15 @@
     <script src="script.js"></script>
   </head>
   <body>
+    <div>
     <form method="get">
       <fieldset>
         <legend>Please tell us who you are(Georgia residents only)</legend>
         <p>
           <label>First Name:</label>
-            <input type="text" id="fname" onblur="capitalFirst()">
+            <input type="text" id="fname" onblur="capitalFirst()"/>
           <label>Last Name:</label>
-            <input type="text" id="lname" onblur="capitalLast()">
+        <input type="text" id="lname" onblur="capitalLast()"/>
         </p>
         <p>
           <label>Telephone</label>
@@ -20,16 +21,17 @@
         </p>
         <p>
           <label>City</label>
-            <input type="text" id="city"/>
-          <label>Zip code:</label>
-            <select>
-              <option>&nbsp&nbsp&nbsp&nbsp&nbsp</option>
-            </select>
+            <input type="text" id="city" list ="cities" onfocus="autoComplete()"/>
+            <datalist id ="cities"></datalist>
+          <label>Zip code</label>
+            <input type="text" id="zipcode" list ="zipcodes" onfocus="autoComplete()"/>
+            <datalist id ="zipcodes"></datalist>
         </p>
         <p>
-          <input type="submit">"Share personal info with unscrupulous marketing staff"</input>
+          <input type="submit">"Share personal info with unscrupulous marketing staff"
         </p>
       </fieldset>
     </form>
+    </div>
   </body>
 </html>

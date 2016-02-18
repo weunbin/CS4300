@@ -112,7 +112,7 @@ function autoComplete(){
             getCity = q;
     }
     for(var n = 0; n < zipcodeArray[getCity].length; n++){
-            zipCodeoptions += '<option value="'+zipcodeArray[getCity][n]+'">';
+            zipCodeoptions += '<option value="'+zipcodeArray[getCity][n]+'">' + zipcodeArray[getCity][n] +'</option>';
     }
     document.getElementById('zipcodes').innerHTML = zipCodeoptions;
     

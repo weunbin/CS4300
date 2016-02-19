@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html>
-
-  <head>
-    <title>Tell Us Who You Are</title>
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <div>
-    <form method="get">
-      <fieldset>
-        <legend>Please tell us who you are(Georgia residents only)</legend>
-        <p>
-          <label>First Name:</label>
-            <input type="text" id="fname" onblur="capitalFirst()"/>
-          <label>Last Name:</label>
-        <input type="text" id="lname" onblur="capitalLast()"/>
-        </p>
-        <p> 
-          <label>Telephone</label>
-            <input type="text" id="telephone" onblur="phone()"/>
-        </p>
-        <p>
-          <label>City</label>
-            <input type="text" id="city" list ="cities" onkeyup="autoCompleteCity()" onblur="alertCity()" onchange="autoCompleteZipcode()" autocomplete="on"/>
-            <datalist id ="cities"></datalist>
-          <label>Zip code</label>
-            <select id ="zipcodes" ></select>
-        </p>
-        <p>
-          <input type="submit">"Share personal info with unscrupulous marketing staff"
-        </p>
-      </fieldset>
-    </form>
-    </div>
-  </body>
+    <head>
+        <title>Tell Us Who You Are</title>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div>
+            <form method="get">
+                <fieldset>
+                    <legend>Please tell us who you are(Georgia residents only)</legend>
+                    <p>
+                        <label>First Name:</label>
+                        <input type="text" id="fname" onblur="capitalFirst()"/>
+                        <label>Last Name:</label>
+                        <input type="text" id="lname" onblur="capitalLast()"/>
+                    </p>
+                    <p> 
+                        <label>Telephone</label>
+                        <input type="text" id="telephone" onblur="phone()"/>
+                    </p>
+                    <p>
+                        <label>City</label>
+                        <input type="text" id="city" list ="cities" onkeyup="autoCompleteCity()" onblur="alertCity()" onchange="autoCompleteZipcode()"/>
+                        <datalist id ="cities">
+                        </datalist>
+                        <label>Zip code:</label>
+                        <select id ="zipcodes" ></select>
+                    </p>
+                    <p>
+                        <input type="submit" value="Share personal info with our unscrupulous marketing staff">
+                    </p>
+                </fieldset>
+            </form>
+        </div>
+    </body>
 </html>

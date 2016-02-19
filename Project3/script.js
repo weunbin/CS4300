@@ -663,7 +663,7 @@ function autoCompleteZipcode(){
         for(k = 0; k < zipcodeLength; k++){
             zipcodeArray[i][k] = tempArray[k+1];
             zipcodeArray[i][k] = zipcodeArray[i][k].replace(/[\r\n]/,'');
-        }
+            }
     }
     
     var notFound = true;

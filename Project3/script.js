@@ -18,8 +18,6 @@ function phone() {
     }
 }
 
-
-
 function autoCompleteZipcode(){
     var textArray = [];
     var cityArray = [];
@@ -71,13 +69,10 @@ function autoCompleteZipcode(){
         if(!notFound)
             zipCodeoptions += '<option value="'+zipcodeArray[getCity][n]+'">' + zipcodeArray[getCity][n] +'</option>';
         else{
-            zipCodeoptions += '<option value="not found">not found</option>'; 
+            zipCodeoptions += '<option value="not found">Not found</option>';
         }
     }
     document.getElementById('zipcodes').innerHTML = zipCodeoptions;
-    
-    
-    
 }
 
 function alertCity(){
@@ -118,7 +113,7 @@ function alertCity(){
                 notFound = false;
     }      
     if(notFound)
-        alert(selectedCity + ' does not exit!');
+        alert(selectedCity + ' Does not exist!');
 }
 
 function autoCompleteCity(){
@@ -149,15 +144,27 @@ function autoCompleteCity(){
             }
         }
     }
-    
+    var complete;
+    var tempInput;
+    var tempCity;
+    var same = 0;
+    var finish = document.getElementById("city").value;
+    tempInput = finish.toUpperCase();
+    var leng = tempInput.length;
     csvFile.send(null);
     var options = '';
     for(var o = 0; o < cityArray.length; o++){
+        tempCity = cityArray[o].substr(0,leng).toUpperCase();
+        if (Boolean(tempCity == tempInput)) {
+            if (Boolean(same == 0)) {
+                complete = cityArray[o];
+            }
+            same++;
+        }
         options += '<option value="'+cityArray[o]+'">';
     }
     document.getElementById('cities').innerHTML = options;
-    var input = document.getElementById('city');
-    input.value = input.value.replace(/([^\W_]+[^\s-]*) */g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
-                        
+    if (Boolean(same == 1)) {
+        document.getElementById("city").value = complete;
+    }
 }
-

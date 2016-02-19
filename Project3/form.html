@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html>
-   <head>
-    <title>Tell Us Who You Are</title>
-    <link rel="stylesheet" type="text/css" href="form.css">
-    <script src="script.js"></script>
+    <head>
+        <title>Tell Us Who You Are</title>
+        <link rel="stylesheet" type="text/css" href="form.css">
+        <script src="script.js"></script>
     </head>
-  <body>
-    <div>
-    <form method="get">
-      <fieldset>
-        <legend>Please tell us who you are(Georgia residents only)</legend>
+    <body>
         <div>
-          <p>
-            <label>First Name</label>
-              <input type="text" id="fname" onblur="capitalFirst()"/>
-            <label>Last Name</label>
-              <input type="text" id="lname" onblur="capitalLast()"/>
-          </p>
-          <p> 
-            <label>Telephone </label>
-              <span class="tele"><input type="text" id="telephone" size="15" onblur="phone()"/></span>
-          </p>
-          <p>
-            <label>City</label>
-              <span><input type="text" id="city" list ="cities" onfocus="autoComplete()" onblur="alertCity()" onchange="autoCompleteZipcode()"/></span>
-              <datalist id ="cities"></datalist>
-            <label>Zip code: </label>
-              <input type="text" id="zipcode" size="5" list ="zipcodes" onfocus="autoComplete()"/>
-              <datalist id ="zipcodes">
-              </datalist>
-          </p>
+            <form method="get">
+                <fieldset>
+                    <legend>Please tell us who you are (Georgia residents only)</legend>
+                    <div>
+                        <p>
+                            <label>First Name</label>
+                            <input type="text" id="fname" onblur="capitalFirst()"/>
+                            <label>Last Name</label>
+                            <input type="text" id="lname" onblur="capitalLast()"/>
+                        </p>
+                        <p>
+                            <label>Telephone </label>
+                            <span class="tele"><input type="text" id="telephone" size="15" onblur="phone()"/></span>
+                        </p>
+                        <p>
+                            <label>City</label>
+                            <span><input type="text" id="city" list ="cities" onfocus="autoComplete()" onblur="alertCity()" onchange="autoCompleteZipcode()"/></span>
+                            <datalist id ="cities"></datalist>
+                            <label>Zip code: </label>
+                            <select id ="zipcodes" ></select>
+                            <datalist id ="zipcodes"></datalist>
+                        </p>
+                    </div>
+                    <p>
+                        <div class="bottom">
+                            <input type="submit" value="Share personal info with unscrupulous marketing staff"/></div>
+                </fieldset>
+            </form>
         </div>
-          <p>
-          <div class="bottom">
-            <input type="submit" value="Share personal info with unscrupulous marketing staff"/></div>
-      </fieldset>
-      </form>
-    </div>
-  </body>
+    </body>
 </html>

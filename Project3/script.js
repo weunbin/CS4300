@@ -1,5 +1,3 @@
-
-
 function capitalFirst() {
     var input = document.getElementById('fname');
     input.value = input.value.replace(/([^\W_]+[^\s-]*) */g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
@@ -79,7 +77,6 @@ function autoCompleteZipcode(){
     
 }
 
-
 function alertCity(){
     var textArray = [];
     var cityArray = [];
@@ -121,7 +118,6 @@ function alertCity(){
         alert(selectedCity + ' does not exit!');
 }
 
-
 function autoCompleteCity(){
     var textArray = [];
     var cityArray = [];
@@ -159,4 +155,3 @@ function autoCompleteCity(){
     document.getElementById('cities').innerHTML = options;
                         
 }
-

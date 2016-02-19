@@ -71,8 +71,7 @@ function autoCompleteZipcode(){
         if(!notFound)
             zipCodeoptions += '<option value="'+zipcodeArray[getCity][n]+'">' + zipcodeArray[getCity][n] +'</option>';
         else{
-            zipCodeoptions += '<option value="not found">not found</option>';
-            
+            zipCodeoptions += '<option value="not found">not found</option>'; 
         }
     }
     document.getElementById('zipcodes').innerHTML = zipCodeoptions;

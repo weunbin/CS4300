@@ -1,1 +1,37 @@
-css will go here tomorrow morning
+body {
+    background-color: pink;
+    
+}
+
+fieldset {
+    border-style: none;
+    margin-top: 50px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 15pt;
+    text-align: center;
+}
+
+p {
+    padding: 0px;
+    margin: 4px;
+}
+
+div{
+    display: inline-block;
+}
+
+.bottom{
+    align-items: left;
+    margin-left: 50px;
+}
+
+span {
+    margin-left: 44px;
+}
+
+.tele {
+    margin-left: 4px; 
+}

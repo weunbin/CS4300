@@ -656,15 +656,13 @@ function autoCompleteZipcode(){
     
     textArray = text.split("\n");
     for(i = 0; i < textArray.length; i++){
-        for(j = 0; j < textArray[i].length; i++){
-            tempArray = textArray[i].split(",");
-            cityArray[i] = tempArray[0];
-            var zipcodeLength = tempArray.length - 1;
-            zipcodeArray[i] = new Array(zipcodeLength);
-            for(k = 0; k < zipcodeLength; k++){
-                zipcodeArray[i][k] = tempArray[k+1];
-                zipcodeArray[i][k] = zipcodeArray[i][k].replace(/[\r\n]/,'');
-            }
+        tempArray = textArray[i].split(",");
+        cityArray[i] = tempArray[0];
+        var zipcodeLength = tempArray.length - 1;
+        zipcodeArray[i] = new Array(zipcodeLength);
+        for(k = 0; k < zipcodeLength; k++){
+            zipcodeArray[i][k] = tempArray[k+1];
+            zipcodeArray[i][k] = zipcodeArray[i][k].replace(/[\r\n]/,'');
         }
     }
     
@@ -1328,10 +1326,8 @@ function alertCity(){
     
     textArray = text.split("\n");
     for(i = 0; i < textArray.length; i++){
-        for(j = 0; j < textArray[i].length; i++){
-            tempArray = textArray[i].split(",");
-            cityArray[i] = tempArray[0];
-        }
+        tempArray = textArray[i].split(",");
+        cityArray[i] = tempArray[0];
     }
     
     var notFound = true;
@@ -1350,9 +1346,7 @@ function alertCity(){
 function autoCompleteCity(){
     var textArray = [];
     var cityArray = [];
-    var zipcodeArray = [];
     var tempArray = [];
-    var zipCodeInc = 0;
     var text = "Abbeville,31001\n"
         + "Acworth,30101,30102\n"
         + "Adairsville,30103\n"
@@ -1986,18 +1980,14 @@ function autoCompleteCity(){
     
     textArray = text.split("\n");
     for(i = 0; i < textArray.length; i++){
-        for(j = 0; j < textArray[i].length; i++){
-            tempArray = textArray[i].split(",");
-            cityArray[i] = tempArray[0];
-        }
+        tempArray = textArray[i].split(",");
+        cityArray[i] = tempArray[0];
     }
-    
     var complete;
     var tempInput;
     var tempCity;
     var same = 0;
     var finish = document.getElementById("city").value;
-    alert(finish);
     tempInput = finish.toUpperCase();
     var leng = tempInput.length;
     var options = '';

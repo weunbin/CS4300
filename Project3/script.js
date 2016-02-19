@@ -1997,6 +1997,7 @@ function autoCompleteCity(){
     var tempCity;
     var same = 0;
     var finish = document.getElementById("city").value;
+    alert(finish);
     tempInput = finish.toUpperCase();
     var leng = tempInput.length;
     var options = '';

@@ -1,5 +1,3 @@
-
-
 function capitalFirst() {
     var input = document.getElementById('fname');
     input.value = input.value.replace(/([^\W_]+[^\s-]*) */g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
@@ -72,15 +70,16 @@ function autoCompleteZipcode(){
     for(var n = 0; n < zipcodeArray[getCity].length; n++){
         if(!notFound)
             zipCodeoptions += '<option value="'+zipcodeArray[getCity][n]+'">' + zipcodeArray[getCity][n] +'</option>';
-        else
+        else{
             zipCodeoptions += '<option value="not found">not found</option>';
+            
+        }
     }
     document.getElementById('zipcodes').innerHTML = zipCodeoptions;
     
     
     
 }
-
 
 function alertCity(){
     var textArray = [];
@@ -123,7 +122,6 @@ function alertCity(){
         alert(selectedCity + ' does not exit!');
 }
 
-
 function autoCompleteCity(){
     var textArray = [];
     var cityArray = [];
@@ -163,6 +161,4 @@ function autoCompleteCity(){
     input.value = input.value.replace(/([^\W_]+[^\s-]*) */g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
                         
 }
-
-
 

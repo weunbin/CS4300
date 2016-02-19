@@ -20,6 +20,8 @@ function phone() {
     }
 }
 
+
+
 function autoCompleteZipcode(){
     var textArray = [];
     var cityArray = [];
@@ -157,6 +159,10 @@ function autoCompleteCity(){
         options += '<option value="'+cityArray[o]+'">';
     }
     document.getElementById('cities').innerHTML = options;
+    var input = document.getElementById('city');
+    input.value = input.value.replace(/([^\W_]+[^\s-]*) */g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
                         
 }
+
+
 

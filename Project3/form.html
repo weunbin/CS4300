@@ -23,11 +23,10 @@
                         </p>
                         <p>
                             <label>City</label>
-                            <span><input type="text" id="city" list ="cities" onfocus="autoComplete()" onblur="alertCity()" onchange="autoCompleteZipcode()"/></span>
-                            <datalist id ="cities"></datalist>
+                            <span><input type="text" id="city" list ="cities" onkeyup="autoCompleteCity()" onblur="alertCity()" onchange="autoCompleteZipcode()"/>
+                            <datalist id ="cities"></datalist></span>
                             <label>Zip code: </label>
                             <select id ="zipcodes" ></select>
-                            <datalist id ="zipcodes"></datalist>
                         </p>
                     </div>
                     <p>

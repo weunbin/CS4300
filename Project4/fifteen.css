@@ -1,1 +1,30 @@
 
+head {
+    background-color: white;
+    text-align: center;
+    font-family: cursive;
+    font-size: 14pt;
+}
+
+body {
+    text-align: center;
+    font-family: cursive;
+    font-size: 14pt;
+}
+
+p {
+    text-align: center;
+    font-family: cursive;
+    font-size: 14pt;
+}
+
+#puzzlearea {
+    background-image: url("background.jpg");
+    font-size: 40pt;
+}
+
+#shufflebutton {
+    text-align: center;
+    font-family: cursive;
+    font-size: 14pt;
+}

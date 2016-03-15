@@ -20,6 +20,7 @@ p {
 
 #puzzlearea {
     background-image: url("background.jpg");
+    background-repeat: no-repeat;
     font-size: 40pt;
 }
 

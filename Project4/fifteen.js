@@ -18,7 +18,6 @@ var mouse;
 
 function init()
 {
-    document.body.style.backgroundImage = "url('background.jpg')";
     initPuzzle();
 }
 
@@ -72,84 +71,91 @@ function initPuzzle()
         col += 1;
         pieces[i].id = "piece_" + row + "_" + col;
         pieces[i].onclick = move;
+        pieces[i].onmouseover = red
+        pieces[i].onmouseout = black;
     }
-
+    document.getElementById("shufflebutton").onclick = shuffle;
 }
 
+function red() {
+    var piece = document.getElementById(this.id);
+    var positions = this.id.split("_");
+    var row = parseInt(positions[1]);
+    var col = parseInt(positions[2]);
+    var movePos = checkNeighbors(row,col);
+    if (movePos != 0) {
+        piece.style.borderColor = "red";
+        piece.style.color = "red";
+    }
+}
+
+function black() {
+    var piece = document.getElementById(this.id);
+    var positions = this.id.split("_");
+    var row = parseInt(positions[1]);
+    var col = parseInt(positions[2]);
+    var movePos = checkNeighbors(row,col);
+    if (movePos != 0) {
+        piece.style.borderColor = "black";
+        piece.style.color = "black";
+    }
+}
 
 function move(){
     var piece = document.getElementById(this.id);
     var positions = this.id.split("_");
-    var x = parseInt(positions[1]);
-    var y = parseInt(positions[2]);
-    var nexX;
-    var newY;
-    var movePos = checkNeighbors(piece,x,y);
+    var row = parseInt(positions[1]);
+    var col = parseInt(positions[2]);
+    var movePos = checkNeighbors(row,col);
     switch(movePos){
         case 1:
-            piece.id = "piece_" + x+1 + "_" + y;
-            if(x > 0)
-                nexX = ((x+1)-1)*100;
-            else
-                newX = 0;
-            if(y > 0)
-                nexY = (y-1)* 100;
-            else
-                newY = 0;
-            piece.style.top = newX + "px";
-            piece.style.left = newY + "px";
+            piece.style.top = ((row-2)*100) + "px";
+            piece.id = "piece_" + (row-1) + "_" + col;
             break;
         case 2:
-            piece.id = "piece_" + x-1 + "_" + y;
-            if(x-1 > 0)
-                nexX = ((x-1)-1)*100;
-            else
-                newX = 0;
-            if(y > 0)
-                nexY = (y-1)* 100;
-            else
-                newY = 0;
-            piece.style.top = newX + "px";
-            piece.style.left = newY + "px";
+            piece.style.top = ((row)*100) + "px";
+            piece.id = "piece_" + (row+1) + "_" + col;
             break;
         case 3:
-            piece.id = "piece_" + x + "_" + y-1;
-            if(x > 0)
-                nexX = (x-1)*100;
-            else
-                newX = 0;
-            if(y-1 > 0)
-                nexY = ((y-1)-1)* 100;
-            else
-                newY = 0;
-            piece.style.top = newX + "px";
-            piece.style.left = newY + "px";
+            piece.style.left = ((col-2)*100) + "px";
+            piece.id = "piece_" + row + "_" + (col-1);
             break;
         case 4:
-            piece.id = "piece_" + x + "_" + y+1;
-             if(x > 0)
-                nexX = (x-1)*100;
-            else
-                newX = 0;
-            if(y > 0)
-                nexY = ((y+1)-1)* 100;
-            else
-                newY = 0;
-            piece.style.top = newX + "px";
-            piece.style.left = newY + "px";
-            
+            piece.style.left = ((col)*100) + "px";
+            piece.id = "piece_" + row + "_" + (col+1);
             break;
     }
-    
-
 }
 
-function shuffle(){
-
+function shuffle() {
+    var moves = 0;
+    while (moves < 500) {
+        var tile = Math.floor(Math.random() * (14 - 0 + 1)) + 0;
+        var positions = pieces[tile].id.split("_");
+        var row = parseInt(positions[1]);
+        var col = parseInt(positions[2]);
+        var movePos = checkNeighbors(row,col);
+        if (movePos == 1) {
+            moves++;
+            pieces[tile].style.top = ((row-2)*100) + "px";
+            pieces[tile].id = "piece_" + (row-1) + "_" + col;
+        } else if (movePos == 2) {
+            moves++;
+            pieces[tile].style.top = ((row)*100) + "px";
+            pieces[tile].id = "piece_" + (row+1) + "_" + col;
+        } else if (movePos == 3) {
+            moves++;
+            pieces[tile].style.left = ((col-2)*100) + "px";
+            pieces[tile].id = "piece_" + row + "_" + (col-1);
+        } else if (movePos == 4) {
+            moves++;
+            pieces[tile].style.left = ((col)*100) + "px";
+            pieces[tile].id = "piece_" + row + "_" + (col+1);
+        }
+    }
 }
 
-
-function checkNeighbors(piece,x,y){
+function checkNeighbors(x,y){
     var movePosition = 0;
     var row = 0;
     var col = 0;
@@ -191,12 +197,3 @@ function checkNeighbors(piece,x,y){
     }
     return movePosition;
 }
-
-
-
-
-
-
-
-
-

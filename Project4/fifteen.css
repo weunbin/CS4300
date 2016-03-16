@@ -37,11 +37,6 @@ p {
     width: 90px;
 }
 
-#puzzlearea > div:hover {
-    border-color: red;
-    color: red;
-}
-
 #shufflebutton {
     text-align: center;
     font-family: cursive;

@@ -1,6 +1,6 @@
 <?php include 'top.html';?>
 	<body>
-		<form method="post" action="matches-submit.php">
+		<form method="get" action="matches-submit.php">
 			<fieldset>
 				<legend>Returning User:</legend>
 				<p>

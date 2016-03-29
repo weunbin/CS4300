@@ -29,7 +29,7 @@
 					<option>Linux</option>
 				</select>
 				<p>
-                    <label>Seeking Age:</label>label>
+                    <label>Seeking Age:</label>
 				<input type="text" name="seekMin" size="6" placeholder="min" maxlength="2" id="seekMin">
 				to
 				<input type="text" name="seekMax" size="6" placeholder="max" maxlength="2" id="seekMax">

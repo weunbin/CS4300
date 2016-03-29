@@ -1,6 +1,6 @@
 <?php include 'top.html';?>
 	<body>
-		<form method="post" action="signup-submit.php">
+		<form method="post" action="matches-submit.php">
 			<fieldset>
 				<legend>Returning User:</legend>
 				<p>
@@ -9,7 +9,6 @@
 				<p>
 				
 				<input type="submit" value="View My Matches">
-				
 			</fieldset>
 		</form>
 	</body>

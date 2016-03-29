@@ -1,10 +1,5 @@
 <?php include 'top.html';?>
 	<body>
-	
-	<div id="bannerarea">
-			<img src="nerdluv.png" alt="banner logo" /> <br />
-			where meek geeks meet
-		</div>
 		<form method="post" action="signup-submit.php">
 			<fieldset>
 				<legend>New User Signup:</legend>
@@ -34,15 +29,13 @@
 					<option>Linux</option>
 				</select>
 				<p>
-				<label>Seeking Age:<label>
+                    <label>Seeking Age:</label>label>
 				<input type="text" name="seekMin" size="6" placeholder="min" maxlength="2" id="seekMin">
 				to
 				<input type="text" name="seekMax" size="6" placeholder="max" maxlength="2" id="seekMax">
 				<p>
-				<input type="submit"
-				
+				<input type="submit" value="Sign Up">
 			</fieldset>
 		</form>
-	
 	</body>
 <?php include 'bottom.html' ?>

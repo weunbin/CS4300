@@ -23,8 +23,8 @@
     } else {
         echo "<p><strong>Matches for ".$name."</strong><p>";
         if (strcmp($person[1], "M") == 0) {
+            $index = 0;
             for ($i = 0; $i < count($arr); $i++) {
-                $index = 0;
                 $temp = explode(",", $arr[$i]);
                 if (strcmp("F", $temp[1]) == 0) {
                     $match1[$index] = $temp;
@@ -32,8 +32,8 @@
                 }
             }
         } else {
+            $index = 0;
             for ($i = 0; $i < count($arr); $i++) {
-                $index = 0;
                 $temp = explode(",", $arr[$i]);
                 if (strcmp("M", $temp[1]) == 0) {
                     $match1[$index] = $arr[$i];
@@ -44,59 +44,67 @@
         if (is_null($match1)) {
             echo "Sorry. No matches for ".$name.".";
         } else {
+            $index = 0;
             for ($i = 0; $i < count($match1); $i++) {
-                $index = 0;
                 $temp = explode(",", $match1[$i]);
-                if ($person[5] <= $temp[2] && $person[6] >= $temp[2]) {
+                if (intval($person[5]) <= intval($temp[2]) && intval($person[6]) >= intval($temp[2])) {
                     $match2[$index] = $match1[$i];
                     $index++;
                 }
             }
-        }
-        if (is_null($match2)) {
-            echo "Sorry. No matches for ".$name.".";
-        } else {
-            for ($i = 0; $i < count($match2); $i++) {
+            if (is_null($match2)) {
+                echo "Sorry. No matches for ".$name.".";
+            } else {
                 $index = 0;
-                $temp = explode(",", $match2[$i]);
-                if (strcmp($temp[4], $person[4]) == 0) {
-                    $match3[$index] = $match2[$i];
-                    $index++;
+                for ($i = 0; $i < count($match2); $i++) {
+                    $temp = explode(",", $match2[$i]);
+                    if (strcmp($temp[4], $person[4]) == 0) {
+                        $match3[$index] = $match2[$i];
+                        $index++;
+                    }
+                }
+                if (is_null($match3)) {
+                    echo "Sorry. No matches for ".$name.".";
+                } else {
+                    $index = 0;
+                    for ($i = 0; $i < count($match3); $i++) {
+                        $same = 0;
+                        $temp = explode(",", $match3[$i]);
+                        for ($j = 0; $j < 4; $j++) {
+                            if (strcmp($person[3][0], $temp[3][$j]) == 0) {
+                                $same++;
+                            }
+                            if (strcmp($person[3][1], $temp[3][$j]) == 0) {
+                                $same++;
+                            }
+                            if (strcmp($person[3][2], $temp[3][$j]) == 0) {
+                                $same++;
+                            }
+                            if (strcmp($person[3][3], $temp[3][$j]) == 0) {
+                                $same++;
+                            }
+                        }
+                        if ($same > 0) {
+                            $match4[$index] = $match3[$i];
+                            $index++;
+                        }
+                    }
+                    if (is_null($match4)) {
+                        echo "Sorry. No matches for ".$name.".";
+                    } else {
+                        for ($i = 0; $i < count($match4); $i++) {
+                            $temp = explode(",", $match4[$i]);
+                            echo "<div>";
+                            echo "<div style=\"float: left;\"><img src=\"user.jpg\" alt=\"user picture\" /></div>";
+                            echo "<div style=\"float: left;\"><fieldset>".$temp[0]."</fieldset><p>";
+                            echo "<strong>gender:</strong>".$temp[1]."<br />";
+                            echo "<strong>age:</strong>".$temp[2]."<br />";
+                            echo "<strong>type:</strong>".$temp[3]."<br />";
+                            echo "<strong>OS:</strong>".$temp[4]."</div></div>";
+                        }
+                    }
                 }
             }
-        }
-        if (is_null($match3)) {
-            echo "Sorry. No matches for ".$name.".";
-        } else {
-            for ($i = 0; $i < count($match3); $i++) {
-                $index = 0;
-                $same = 0;
-                $temp = explode(",", $match3[$i]);
-                for ($j = 0; $j < 4; $j++) {
-                    if (strcmp($person[3][0], $temp[3][$j]) == 0) {
-                        $same++;
-                    }
-                    if (strcmp($person[3][1], $temp[3][$j]) == 0) {
-                        $same++;
-                    }
-                    if (strcmp($person[3][2], $temp[3][$j]) == 0) {
-                        $same++;
-                    }
-                    if (strcmp($person[3][3], $temp[3][$j]) == 0) {
-                        $same++;
-                    }
-                }
-                if ($same > 0) {
-                    $match4[$index] = $match3[$i];
-                    $index++;
-                }
-            }
-        }
-        
-        if (is_null($match4)) {
-            echo "Sorry. No matches for ".$name.".";
-        } else {
-            
         }
     }
  ?>

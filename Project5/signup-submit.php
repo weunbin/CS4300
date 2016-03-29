@@ -7,9 +7,9 @@
 	Now <a href="matches.php"> log in to see your matches!</a>
 	
 <?php 
-	$singles="/singles.txt";
+	$singles="singles.txt";
     
-  	$userName = $_POST["name"];
+    	$userName = $_POST["name"];
     	$userGender = $_POST["gender"];
     	$userAge = $_POST["age"];
     	$userType = $_POST["ptype"];

@@ -23,7 +23,7 @@
 				    </a>
                     )</li>
 				<p>
-                    <label><strong>Favorite OS</strong></label>
+                    <label><strong>Favorite OS:</strong></label>
 				    <li><select name="os">
                         <option selected>Windows</option>
                         <option>Mac OS X</option>

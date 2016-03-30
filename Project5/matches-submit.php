@@ -97,10 +97,12 @@
                             echo "<div>";
                             echo "<div style=\"float: left;\"><img src=\"user.jpg\" alt=\"user picture\" /></div>";
                             echo "<div style=\"float: left;\"><fieldset>".$temp[0]."</fieldset><p>";
-                            echo "<strong>gender:</strong>".$temp[1]."<br />";
-                            echo "<strong>age:</strong>".$temp[2]."<br />";
-                            echo "<strong>type:</strong>".$temp[3]."<br />";
-                            echo "<strong>OS:</strong>".$temp[4]."</div></div>";
+                            echo "<ul>"
+                            echo "<strong>gender:</strong><li>".$temp[1]."</li><br />";
+                            echo "<strong>age:</strong><li>".$temp[2]."</li><br />";
+                            echo "<strong>type:</strong><li>".$temp[3]."</li><br />";
+                            echo "<strong>OS:</strong><li>".$temp[4]."</li></div></div></ul>";
+                            
                         }
                     }
                 }

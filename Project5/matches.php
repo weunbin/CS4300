@@ -3,10 +3,13 @@
 		<form method="get" action="matches-submit.php">
 			<fieldset>
 				<legend>Returning User:</legend>
+                <ul>
 				<p>
 				<label for="name">Name:</label>
-				<input type="text" name="name" id="name" maxlength="16">
+				    <li><input type="text" name="name" id="name" maxlength="16">
+                    </li>
 				<p>
+                <ul>
 				
 				<input type="submit" value="View My Matches">
 			</fieldset>

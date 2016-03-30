@@ -97,7 +97,7 @@
                             echo "<div>";
                             echo "<div style=\"float: left;\"><img src=\"user.jpg\" alt=\"user picture\" /></div>";
                             echo "<div style=\"float: left;\"><fieldset>".$temp[0]."</fieldset><p>";
-                            echo "<ul>"
+                            echo "<ul>";
                             echo "<strong>gender:</strong><li>".$temp[1]."</li><br />";
                             echo "<strong>age:</strong><li>".$temp[2]."</li><br />";
                             echo "<strong>type:</strong><li>".$temp[3]."</li><br />";

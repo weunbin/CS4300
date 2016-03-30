@@ -9,7 +9,7 @@
 				    <li><input type="text" name="name" id="name" maxlength="16">
                     </li>
 				<p>
-                <ul>
+                </ul>
 				
 				<input type="submit" value="View My Matches">
 			</fieldset>

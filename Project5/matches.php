@@ -6,8 +6,7 @@
                 <ul>
 				<p>
 				<label for="name">Name:</label>
-				    <li><input type="text" name="name" id="name" maxlength="16">
-                    </li>
+				    <li><input type="text" name="name" id="name" maxlength="16"></li>
 				<p>
                 </ul>
 				

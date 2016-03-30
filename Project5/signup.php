@@ -15,7 +15,7 @@
 				<input type="text" name="age" size="6" maxlength="2" id="age">
 				<p>
 				<label>	Personality type:</label>
-				<input type="text" name = "ptype" size="6">
+				<input type="text" name = "ptype" size="6" pattern="[ieIE]{1}[snSN]{1}[ftFT]{1}[jpJP]{1}">
 				(
 				<a href="http://www.humanmetrics.com/cgi-win/JTypes2.asp">
 				Don't know your type?	

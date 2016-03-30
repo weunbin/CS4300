@@ -5,7 +5,7 @@
 				<legend>New User Signup:</legend>
 				<p>
 				<label for="name">Name:</label>
-				<input type="text" name="name" id="name">
+				<input type="text" name="name" id="name" maxlength="16">
 				<p>
 				<label for="gender">Gender:</label>
 				<input type="radio" name="gender" value="M">Male

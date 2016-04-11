@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Search All</title>
+        <title>Search Kevin</title>
         <meta charset="utf-8" />
         <link href="bacon.css" type="text/css" rel="stylesheet" />
 
@@ -19,7 +19,7 @@
                 <div id="title">
                     Films with 
                     <?php
-                    echo $_GET["firstname"]." ".$_GET["lastname"];
+                    echo $_GET["firstname"]." ".$_GET["lastname"]." and Kevin Bacon";
                     ?>
                 </div>
                 <table>
@@ -32,14 +32,21 @@
                     $username ="root";
                     $password ="";
                     $conn = new PDO('mysql:host=localhost;dbname=imdb_small', $username, $password);
+                    
                     $fname = $_GET["firstname"];
                     $lname = $_GET["lastname"];
                     $id_actor = $conn->query("SELECT id FROM actors a WHERE a.first_name = '".$fname."' AND a.last_name = '".$lname."'");
+                    $kfname ="Kevin";
+                    $klname ="Bacon";
+                    $kevin_id = $conn->query("SELECT id FROM actors a WHERE a.first_name = '".$kfname."' AND a.last_name = '".$klname."'");
+                    
+                    foreach($kevin_id as $id)
+                        $kevin_id = $id['id'];
                     
                     foreach($id_actor as $id)
                         $actor_id = $id['id'];
                     
-                    $sql = $conn->query("SELECT movie.year, movie.name FROM movies movie JOIN roles role ON role.movie_id = movie.id JOIN actors actor ON role.actor_id = actor.id WHERE role.actor_id = '".$actor_id."' ORDER BY movie.year DESC, movie.name ASC");
+                    $sql = $conn->query("SELECT movie.year, movie.name FROM movies movie JOIN roles role1 ON role1.movie_id = movie.id JOIN actors actor1 ON role1.actor_id = actor1.id JOIN roles role2 ON role2.movie_id = movie.id JOIN actors actor2 ON role2.actor_id = actor2.id WHERE role1.movie_id = role2.movie_id AND role1.actor_id = '".$actor_id."' AND role2.actor_id = '".$kevin_id."' ORDER BY movie.year DESC, movie.name ASC");
                    
                     $row_num = 0;
                     

@@ -1,1 +1,47 @@
-todo
+body {
+    padding: 0;
+    margin: 0;
+}
+
+fieldset {
+    text-align: left;
+    width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+fieldset div {
+    text-align: center;
+}
+
+input[type=text] {
+    border-top-width: 2px;
+    border-left-width: 2px;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+}
+
+input[type=submit] {
+    border-radius: 0px;
+    background-color: rgb(232,232,232);
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+}
+
+#banner {
+    top: 0;
+    width: 100%;
+    height: 50px;
+    margin: 0px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+
+#main {
+    padding: 10px;
+    text-align: center;
+}

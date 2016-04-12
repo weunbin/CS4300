@@ -43,33 +43,121 @@
                         $actor_id = $id['id'];
                     
                     if(isset($actor_id)){
-                    $sql = $conn->query("SELECT movie.year, movie.name FROM movies movie JOIN roles role1 ON role1.movie_id = movie.id JOIN actors actor1 ON role1.actor_id = actor1.id JOIN roles role2 ON role2.movie_id = movie.id JOIN actors actor2 ON role2.actor_id = actor2.id WHERE role1.movie_id = role2.movie_id AND role1.actor_id = '".$actor_id."' AND role2.actor_id = '".$kevin_id."' ORDER BY movie.year DESC, movie.name ASC");
+                        $sql = $conn->query("SELECT movie.year, movie.name FROM movies movie JOIN roles role1 ON role1.movie_id = movie.id JOIN actors actor1 ON role1.actor_id = actor1.id JOIN roles role2 ON role2.movie_id = movie.id JOIN actors actor2 ON role2.actor_id = actor2.id WHERE role1.movie_id = role2.movie_id AND role1.actor_id = '".$actor_id."' AND role2.actor_id = '".$kevin_id."' ORDER BY movie.year DESC, movie.name ASC");
+
+                        $row_num = 0;
+
+                        if($sql->rowCount() < 1){
+                            echo $fname, ' ', $lname, ' wasn`t in any films with Kevin Bacon.';
+                        } else {
+                            createtablehead();
+
+                            foreach($sql as $row){
+                                echo "<tr><td>";
+                                echo $row_num+1;
+                                echo "</td><td>";
+                                echo $row['name'];
+                                echo "</td><td>";
+                                echo $row['year'];
+                                echo "</td></tr>";
+                                $row_num++;
+                            }
+                        }
+                    } else if (isset($actor_id) == NULL){
+                        $weird_name = $conn->query("SELECT id FROM actors a WHERE a.last_name = '".$lname."' AND a.first_name LIKE '".$fname."%'");
+                        
+                        if($weird_name->rowCount() > 0) {
+                            if ($weird_name->rowCount() == 1) {
+                                foreach($weird_name as $id)
+                                    $actor_id = $id['id'];
                     
-                    $row_num = 0;
-                                        
-                    if($sql->rowCount() < 1){
-                        echo $fname, ' ', $lname, ' wasn`t in any films with Kevin Bacon.';
+                                if(isset($actor_id)){
+                                    $sql = $conn->query("SELECT movie.year, movie.name FROM movies movie JOIN roles role1 ON role1.movie_id = movie.id JOIN actors actor1 ON role1.actor_id = actor1.id JOIN roles role2 ON role2.movie_id = movie.id JOIN actors actor2 ON role2.actor_id = actor2.id WHERE role1.movie_id = role2.movie_id AND role1.actor_id = '".$actor_id."' AND role2.actor_id = '".$kevin_id."' ORDER BY movie.year DESC, movie.name ASC");
+
+                                    $row_num = 0;
+
+                                    if($sql->rowCount() < 1){
+                                        echo $fname, ' ', $lname, ' wasn`t in any films with Kevin Bacon.';
+                                    } else {
+                                        createtablehead();
+
+                                        foreach($sql as $row){
+                                            echo "<tr><td>";
+                                            echo $row_num+1;
+                                            echo "</td><td>";
+                                            echo $row['name'];
+                                            echo "</td><td>";
+                                            echo $row['year'];
+                                            echo "</td></tr>";
+                                            $row_num++;
+                                        }
+                                    }
+                                }
+                            } else {
+                                $weird_name = $conn->query("SELECT id FROM actors a WHERE a.last_name = '".$lname."' AND a.first_name LIKE '".$fname."' AND a.film_count = (SELECT film_count FROM actors b WHERE b.last_name = '".$lname."' AND b.first_name LIKE '".$fname."' HAVING MAX(film_count))");
+                                if ($weird_name->rowCount() == 1) {
+                                    foreach($weird_name as $id)
+                                        $actor_id = $id['id'];
+
+                                    if(isset($actor_id)){
+                                        $sql = $conn->query("SELECT movie.year, movie.name FROM movies movie JOIN roles role1 ON role1.movie_id = movie.id JOIN actors actor1 ON role1.actor_id = actor1.id JOIN roles role2 ON role2.movie_id = movie.id JOIN actors actor2 ON role2.actor_id = actor2.id WHERE role1.movie_id = role2.movie_id AND role1.actor_id = '".$actor_id."' AND role2.actor_id = '".$kevin_id."' ORDER BY movie.year DESC, movie.name ASC");
+
+                                        $row_num = 0;
+
+                                        if($sql->rowCount() < 1){
+                                            echo $fname, ' ', $lname, ' wasn`t in any films with Kevin Bacon.';
+                                        } else {
+                                            createtablehead();
+
+                                            foreach($sql as $row){
+                                                echo "<tr><td>";
+                                                echo $row_num+1;
+                                                echo "</td><td>";
+                                                echo $row['name'];
+                                                echo "</td><td>";
+                                                echo $row['year'];
+                                                echo "</td></tr>";
+                                                $row_num++;
+                                            }
+                                        }
+                                    }
+                                } else {
+                                    $weird_name = $conn->query("SELECT id FROM actors a WHERE a.last_name = '".$lname."' AND a.first_name LIKE '".$fname."' Having MIN(id)");
+                                    if ($weird_name->rowCount() == 1) {
+                                        foreach($weird_name as $id)
+                                            $actor_id = $id['id'];
+
+                                        if(isset($actor_id)){
+                                            $sql = $conn->query("SELECT movie.year, movie.name FROM movies movie JOIN roles role1 ON role1.movie_id = movie.id JOIN actors actor1 ON role1.actor_id = actor1.id JOIN roles role2 ON role2.movie_id = movie.id JOIN actors actor2 ON role2.actor_id = actor2.id WHERE role1.movie_id = role2.movie_id AND role1.actor_id = '".$actor_id."' AND role2.actor_id = '".$kevin_id."' ORDER BY movie.year DESC, movie.name ASC");
+
+                                            $row_num = 0;
+
+                                            if($sql->rowCount() < 1){
+                                                echo $fname, ' ', $lname, ' wasn`t in any films with Kevin Bacon.';
+                                            } else {
+                                                createtablehead();
+
+                                                foreach($sql as $row){
+                                                    echo "<tr><td>";
+                                                    echo $row_num+1;
+                                                    echo "</td><td>";
+                                                    echo $row['name'];
+                                                    echo "</td><td>";
+                                                    echo $row['year'];
+                                                    echo "</td></tr>";
+                                                    $row_num++;
+                                                }
+                                            }
+                                        }
+                                    } else {
+                                        echo 'Actor ', $fname, ' ', $lname, ' not found.';
+                                    }
+                                }
+                            }
+                        } else {
+                            echo 'Actor ', $fname, ' ', $lname, ' not found.';   
+                        }
                     }
-                    
-                    else{
-                    createtablehead();
-                    
-                    foreach($sql as $row){
-                        echo "<tr><td>";
-                        echo $row_num+1;
-                        echo "</td><td>";
-                        echo $row['name'];
-                        echo "</td><td>";
-                        echo $row['year'];
-                        echo "</td></tr>";
-                        $row_num++;
-                    }
-                    }
-                    }
-                    else if(isset($actor_id) == NULL){
-                        echo 'Actor ', $fname, ' ', $lname, ' not found.';
-                    }
-                    
                     ?>
                 </table>
             </div>    

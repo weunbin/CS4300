@@ -11,7 +11,7 @@
         $id_actor = $conn->query("SELECT id FROM actors a WHERE a.first_name = '".$fname."' AND a.last_name = '".$lname."'");  
         return $id_actor;
     }
-<<<<<<< HEAD
+
 
     function createtablehead(){
         echo "<tr>";
@@ -19,6 +19,5 @@
         echo "<td>Title</td>";
         echo "<td>Year</td>";
     }
-=======
->>>>>>> origin/master
+
 ?>

@@ -29,12 +29,11 @@
                         <td>Year</td>
                     </tr>
                     <?php
-                    $username ="root";
-                    $password ="";
-                    $conn = new PDO('mysql:host=localhost;dbname=imdb_small', $username, $password);
+                    include 'common.php';
+                    $conn = getdataconnection();
                     $fname = $_GET["firstname"];
                     $lname = $_GET["lastname"];
-                    $id_actor = $conn->query("SELECT id FROM actors a WHERE a.first_name = '".$fname."' AND a.last_name = '".$lname."'");
+                    $id_actor = getactorid($fname, $lname);
                     
                     foreach($id_actor as $id)
                         $actor_id = $id['id'];

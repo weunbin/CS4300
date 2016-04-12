@@ -44,10 +44,10 @@
                     
                     if(isset($actor_id)){
                     $sql = $conn->query("SELECT movie.year, movie.name FROM movies movie JOIN roles role1 ON role1.movie_id = movie.id JOIN actors actor1 ON role1.actor_id = actor1.id JOIN roles role2 ON role2.movie_id = movie.id JOIN actors actor2 ON role2.actor_id = actor2.id WHERE role1.movie_id = role2.movie_id AND role1.actor_id = '".$actor_id."' AND role2.actor_id = '".$kevin_id."' ORDER BY movie.year DESC, movie.name ASC");
-                   
+                    
                     $row_num = 0;
                                         
-                    if(is_null($sql)){
+                    if($sql->rowCount() < 1){
                         echo $fname, ' ', $lname, ' wasn`t in any films with Kevin Bacon.';
                     }
                     
@@ -70,10 +70,8 @@
                         echo 'Actor ', $fname, ' ', $lname, ' not found.';
                     }
                     
-                    
                     ?>
                 </table>
-                
             </div>    
             <form action="search-all.php" method="get">
 					<fieldset>

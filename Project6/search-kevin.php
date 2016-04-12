@@ -7,9 +7,12 @@
 
     </head>
     <body>
-        <div>
-            <div id="banner">My Movie Database</div>
-            <div id ="body">
+        <div id = "frame">
+            <div id="banner">
+				<a href="index.php"><img src="mymdb.png" alt="banner logo" /></a>
+				My Movie Database
+			</div>
+            <div id ="main">
                 <h1>
                     Results for 
                     <?php
@@ -94,6 +97,9 @@
 						</div>
 					</fieldset>
 				</form>
+            <div id="closer">
+            <a href="index.php"><img src="mymdb.png" alt="banner logo" /></a>
+			</div>
         </div>
     </body>
 </html>

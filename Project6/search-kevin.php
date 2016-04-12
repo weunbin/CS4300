@@ -23,19 +23,12 @@
                     ?>
                 </div>
                 <table>
-                    <tr>
-                        <td>#</td>
-                        <td>Title</td>
-                        <td>Year</td>
-                    </tr>
                     <?php
-                    $username ="root";
-                    $password ="";
-                    $conn = new PDO('mysql:host=localhost;dbname=imdb_small', $username, $password);
-                    
+                    include 'common.php';
+                    $conn = getdataconnection();
                     $fname = $_GET["firstname"];
                     $lname = $_GET["lastname"];
-                    $id_actor = $conn->query("SELECT id FROM actors a WHERE a.first_name = '".$fname."' AND a.last_name = '".$lname."'");
+                    $id_actor = getactorid($fname, $lname);
                     $kfname ="Kevin";
                     $klname ="Bacon";
                     $kevin_id = $conn->query("SELECT id FROM actors a WHERE a.first_name = '".$kfname."' AND a.last_name = '".$klname."'");
@@ -46,9 +39,17 @@
                     foreach($id_actor as $id)
                         $actor_id = $id['id'];
                     
+                    if(isset($actor_id)){
                     $sql = $conn->query("SELECT movie.year, movie.name FROM movies movie JOIN roles role1 ON role1.movie_id = movie.id JOIN actors actor1 ON role1.actor_id = actor1.id JOIN roles role2 ON role2.movie_id = movie.id JOIN actors actor2 ON role2.actor_id = actor2.id WHERE role1.movie_id = role2.movie_id AND role1.actor_id = '".$actor_id."' AND role2.actor_id = '".$kevin_id."' ORDER BY movie.year DESC, movie.name ASC");
                    
                     $row_num = 0;
+                                        
+                    if(is_null($sql)){
+                        echo $fname, ' ', $lname, ' wasn`t in any films with Kevin Bacon.';
+                    }
+                    
+                    else{
+                    createtablehead();
                     
                     foreach($sql as $row){
                         echo "<tr><td>";
@@ -59,6 +60,11 @@
                         echo $row['year'];
                         echo "</td></tr>";
                         $row_num++;
+                    }
+                    }
+                    }
+                    else if(isset($actor_id) == NULL){
+                        echo 'Actor ', $fname, ' ', $lname, ' not found.';
                     }
                     
                     

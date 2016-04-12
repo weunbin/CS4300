@@ -23,26 +23,23 @@
                     ?>
                 </div>
                 <table>
-                    <tr>
-                        <td>#</td>
-                        <td>Title</td>
-                        <td>Year</td>
-                    </tr>
                     <?php
-                    $username ="root";
-                    $password ="";
-                    $conn = new PDO('mysql:host=localhost;dbname=imdb_small', $username, $password);
+                    include 'common.php';
+                    $conn = getdataconnection();
                     $fname = $_GET["firstname"];
                     $lname = $_GET["lastname"];
-                    $id_actor = $conn->query("SELECT id FROM actors a WHERE a.first_name = '".$fname."' AND a.last_name = '".$lname."'");
+                    $id_actor = getactorid($fname, $lname);
                     
                     foreach($id_actor as $id)
                         $actor_id = $id['id'];
                     
+                    if(isset($actor_id)){
                     $sql = $conn->query("SELECT movie.year, movie.name FROM movies movie JOIN roles role ON role.movie_id = movie.id JOIN actors actor ON role.actor_id = actor.id WHERE role.actor_id = '".$actor_id."' ORDER BY movie.year DESC, movie.name ASC");
                    
                     $row_num = 0;
                     
+                    createtablehead();
+                        
                     foreach($sql as $row){
                         echo "<tr><td>";
                         echo $row_num+1;
@@ -53,6 +50,8 @@
                         echo "</td></tr>";
                         $row_num++;
                     }
+                    }
+                    else{ echo 'Actor ', $fname, ' ', $lname, ' not found.';}
                     
                     
                     ?>

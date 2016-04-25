@@ -2,35 +2,35 @@
 <html>
 
 <head>
-    <link href="term.css" type="text/css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="term.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 
-    <header>
-        <div id=bannerarea>NBA Draft Helper
-            <img src="placeholder1.jpg" id="placeholder" />
+    <div class="header">
+
+        NBA STATS HELPER
+        <img id="jumpman" src="jumpman-logo-wallpaper-3.jpg">
+    </div>
+
+    <div class="row">
+
+        <div class="col-3 menu">
+            <ul>
+                <li><a href="players.php">Players</a></li>
+                <li><a href="teams.php">Teams</a></li>
+                <li><a href="index.php">Home</a></li>
+            </ul>
         </div>
-    </header>
 
+        <div class="col-9">
+            <h1>The Site</h1>
+            <p> TODO:</p>
+            <p> still looking for a good data set to use and we need to implement forms for searching for players and by team</p>
+        </div>
 
-    <nav>
-        <a href="players.php">Players</a>
-        <br>
-        <a href="teams.php">Teams</a>
-        <br>
-
-    </nav>
-
-    <section>
-        <h1>Purpose</h1>
-        <p>To help interested parties search for the best players in the positions they need for their fantasy team.</p>
-        <p>We will pull information from the database:nba which I'm working on converting from a csv file if you guys find a better database to use please tell me right now the database is not attached</p>
-    </section>
-    <footer>
-
-    </footer>
-
+    </div>
 </body>
 
 </html>

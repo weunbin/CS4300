@@ -52,6 +52,7 @@ html {
 body {
     background-image:url(basketball_court_3d_wallpaper.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .menu li a {
@@ -69,11 +70,27 @@ body {
     padding: 10px 10px 10px 10px;
 }
 
-
+#NBAlogo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width:10%;
+    max-height: 10%
+}
 
 fieldset {
     background-color: black;
     opacity: .75;
     color:aliceblue;
     padding: 2px;
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border: 1px black;
+    background-color: dimgray;
+    color: black;
+    padding: 15px;
 }

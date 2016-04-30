@@ -44,7 +44,6 @@
     include 'common.php';
     $conn = getdataconnection();
     createtableheadteam();
-    createtablehead();
     $team = "Atlanta Hawks";
     $sql = $conn->query("SELECT * FROM teamstats WHERE team = '$team'");
 

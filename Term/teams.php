@@ -37,18 +37,26 @@
 </div>
 </div>
 
+<<<<<<< HEAD
 <div class="row">
     <div class="col-12">
+=======
+>>>>>>> origin/master
 <table>
     <?php
     include 'common.php';
     $conn = getdataconnection();
+<<<<<<< HEAD
     createtableheadteam();
+=======
+    createtablehead();
+>>>>>>> origin/master
     $team = "Atlanta Hawks";
     $sql = $conn->query("SELECT * FROM teamstats WHERE team = '$team'");
 
     foreach($sql as $row){
     echo "<tr><td>";
+<<<<<<< HEAD
     echo $row['Team'];
     echo "</td><td>";
     echo $row['GP'];
@@ -102,12 +110,22 @@
     echo $row['PTS'];
     echo "</td><td>";
     echo $row['PLUS/MINUS'];
+=======
+    echo $row['Player'];
+    echo "</td><td>";
+    echo $row['Team'];
+    echo "</td><td>";
+    echo $row['Pts'];
+>>>>>>> origin/master
     echo "</td></tr>";
     }
     ?>
 </table>
+<<<<<<< HEAD
     </div>
 </div>
+=======
+>>>>>>> origin/master
 <br>
 
 <?php include '/footer.html' ?>

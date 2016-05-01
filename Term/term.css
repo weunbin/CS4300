@@ -139,3 +139,18 @@ tr:nth-child(even) {
 .playertable {
     overflow-x: auto;
 }
+
+.round{
+    display:inline-block;
+    opacity: 0.5;
+}
+
+.contains{
+    text-align:center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.round:hover {
+    opacity: 1.0;
+}

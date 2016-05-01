@@ -33,7 +33,6 @@
         echo "<td>DD2</td>";
         echo "<td>TD3</td>";
         echo "</tr>";
-<<<<<<< HEAD
     }
 
     function createtableheadteam(){
@@ -66,8 +65,6 @@
         echo "<td>PTS</td>";
         echo "<td>Plus/Minus</td>";
         echo "</tr>";
-=======
->>>>>>> origin/master
     }
 ?>
 

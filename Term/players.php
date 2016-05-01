@@ -62,8 +62,4 @@
             </table>
     </div>
 </div>
-<<<<<<< HEAD
     <?php include 'footer.html' ?>
-=======
-    <?php include 'footer.html' ?>
->>>>>>> origin/master

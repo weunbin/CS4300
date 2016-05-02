@@ -49,7 +49,6 @@
     else:
         $team = "Atlanta Hawks";
     endif;
-    $team = "Atlanta Hawks";
     $sql = $conn->query("SELECT * FROM teamstats WHERE team = '$team'");
 
     foreach($sql as $row){

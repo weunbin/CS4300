@@ -1,7 +1,7 @@
 <?php include 'header.html' ?>
 <div class="row">
     <div class="col-12 playertable">
-            <table>
+            <table id ="ptable">
                 <?php
                     include 'common.php';
                     $conn = getdataconnection();
@@ -67,30 +67,30 @@
                     }
                     $sql = $conn->query("SELECT playerstats.Player,playerstats.Team,playerstats.Age,playerstats.GP,playerstats.W,playerstats.L,playerstats.MIN,playerstats.FGM,playerstats.FGA,playerstats.`FG%`,playerstats.3PM,playerstats.3PA,playerstats.`3P%`,playerstats.FTM,playerstats.FTA,playerstats.`FT%`,playerstats.REB,playerstats.AST,playerstats.TOV,playerstats.STL,playerstats.BLK,playerstats.PTS,playerstats.DD2,playerstats.TD3 FROM playerstats ORDER BY ".$field.$sort);
                              
-                    echo '<th><a href="players.php?sorting='.$sort.'&field=Player">Player</a></th>';
-                    echo '<th><a href="players.php?sorting='.$sort.'&field=Team">Team</a></th>';
-                    echo '<th><a href="players.php?sorting='.$sort.'&field=Age">Age</a></th>';
-                    echo '<th><a href="players.php?sorting='.$sort.'&field=GP">GP</a></th>';
-                    echo '<th><a href="players.php?sorting='.$sort.'&field=W">W</a></th>';
-                    echo '<th><a href="players.php?sorting='.$sort.'&field=L">L</a></th>';
-                    echo '<th><a href="players.php?sorting='.$sort.'&field=MIN">Min</a></th>';
-                    echo '<th><a href="players.php?sorting='.$sort.'&field=FGM">FGM</a></th>';
-                    echo '<th><a href="players.php?sorting='.$sort.'&field=FGA">FGA</a></th>';
-                    echo '<th><a href="players.php?sorting='.$sort.'&field=FG%">FG%</a></th>';
-                    echo '<th><a href="players.php?sorting='.$sort.'&field=3PM">3PM</a></th>';
-                    echo '<th><a href="players.php?sorting='.$sort.'&field=3PA">3PA</a></th>';
-                    echo '<th><a href="players.php?sorting='.$sort.'&field=3P%">3P%</a></th>';
-                    echo '<th><a href="players.php?sorting='.$sort.'&field=FTM">FTM</a></th>';
-                    echo '<th><a href="players.php?sorting='.$sort.'&field=FTA">FTA</a></th>';
-                    echo '<th><a href="players.php?sorting='.$sort.'&field=FT%">FT%</a></th>';
-                    echo '<th><a href="players.php?sorting='.$sort.'&field=REB">REB</a></th>';
-                    echo '<th><a href="players.php?sorting='.$sort.'&field=AST">AST</a></th>';
-                    echo '<th><a href="players.php?sorting='.$sort.'&field=TOV">TOV</a></th>';
-                    echo '<th><a href="players.php?sorting='.$sort.'&field=STL">STL</a></th>';
-                    echo '<th><a href="players.php?sorting='.$sort.'&field=BLK">BLK</a></th>';
-                    echo '<th><a href="players.php?sorting='.$sort.'&field=PTS">PTS</a></th>';
-                    echo '<th><a href="players.php?sorting='.$sort.'&field=DD2">DD2</a></th>';
-                    echo '<th><a href="players.php?sorting='.$sort.'&field=TD3">TD3</a></th>';
+                    echo '<th><a href="players.php?sorting='.$sort.'&field=Player#ptable">Player</a></th>';
+                    echo '<th><a href="players.php?sorting='.$sort.'&field=Team#ptable">Team</a></th>';
+                    echo '<th><a href="players.php?sorting='.$sort.'&field=Age#ptable">Age</a></th>';
+                    echo '<th><a href="players.php?sorting='.$sort.'&field=GP#ptable">GP</a></th>';
+                    echo '<th><a href="players.php?sorting='.$sort.'&field=W#ptable">W</a></th>';
+                    echo '<th><a href="players.php?sorting='.$sort.'&field=L#ptable">L</a></th>';
+                    echo '<th><a href="players.php?sorting='.$sort.'&field=MIN#ptable">Min</a></th>';
+                    echo '<th><a href="players.php?sorting='.$sort.'&field=FGM#ptable">FGM</a></th>';
+                    echo '<th><a href="players.php?sorting='.$sort.'&field=FGA#ptable">FGA</a></th>';
+                    echo '<th><a href="players.php?sorting='.$sort.'&field=FG%#ptable">FG%</a></th>';
+                    echo '<th><a href="players.php?sorting='.$sort.'&field=3PM#ptable">3PM</a></th>';
+                    echo '<th><a href="players.php?sorting='.$sort.'&field=3PA#ptable">3PA</a></th>';
+                    echo '<th><a href="players.php?sorting='.$sort.'&field=3P%#ptable">3P%</a></th>';
+                    echo '<th><a href="players.php?sorting='.$sort.'&field=FTM#ptable">FTM</a></th>';
+                    echo '<th><a href="players.php?sorting='.$sort.'&field=FTA#ptable">FTA</a></th>';
+                    echo '<th><a href="players.php?sorting='.$sort.'&field=FT%#ptable">FT%</a></th>';
+                    echo '<th><a href="players.php?sorting='.$sort.'&field=REB#ptable">REB</a></th>';
+                    echo '<th><a href="players.php?sorting='.$sort.'&field=AST#ptable">AST</a></th>';
+                    echo '<th><a href="players.php?sorting='.$sort.'&field=TOV#ptable">TOV</a></th>';
+                    echo '<th><a href="players.php?sorting='.$sort.'&field=STL#ptable">STL</a></th>';
+                    echo '<th><a href="players.php?sorting='.$sort.'&field=BLK#ptable">BLK</a></th>';
+                    echo '<th><a href="players.php?sorting='.$sort.'&field=PTS#ptable">PTS</a></th>';
+                    echo '<th><a href="players.php?sorting='.$sort.'&field=DD2#ptable">DD2</a></th>';
+                    echo '<th><a href="players.php?sorting='.$sort.'&field=TD3#ptable">TD3</a></th>';
                     foreach($sql as $row) {
                         echo "<tr><td>";
                         echo $row['Player'];

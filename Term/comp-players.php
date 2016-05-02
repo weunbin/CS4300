@@ -509,7 +509,7 @@
                     echo "Please Enter Two Correct Player Names!";
                     echo "<form action='comparison.php' method='get'>";
                     echo "<div>";
-                    echo "<input type='submit' value='Go back' style='height:200px; width:200px'/>";
+                    echo "<input type='submit' value='Go back'/>";
                     echo "</div>";
                     echo "</form>";
                 }
@@ -521,7 +521,7 @@
                 if(!$p1 && !$p2 && $cmp2 && $cmp1){
                 echo "<form action='comparison.php' method='get'>";
                 echo "<div>";
-                echo "<input type='submit' value='Compare Other Players' style='height:200px; width:200px'/>";
+                echo "<input type='submit' value='Compare Other Players'/>";
                 echo "</div>";
                 echo "</form>";
                 }

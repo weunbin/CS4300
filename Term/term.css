@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 .row::after {
@@ -68,46 +68,40 @@ html {
 }
 
 .header {
-    border: 1px black;
+    width: 100%;
+    border: 5px black;
     background-color: dimgray;
     color: black;
-    padding: 15px;
+    z-index: 10000;
 }
 
-.menu ul {
+.menu {
+    text-align: center;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.menu li {
-    padding: 8px;
-    margin-bottom: 7px;
     background-color: dimgray;
     color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0), 0 1px 2px rgba(0, 0, 0, 0);
+    text-decoration: none;
+    display: block;
+    color: black;
 }
 
-.menu li:hover {
+.menu:hover {
     background-color: orange;
 }
 
 body {
     background-image: url(basketball_court_3d_wallpaper.jpg);
     background-size: cover;
+    padding-bottom: 50px;
+    position: relative;
 }
 
-.menu li a {
+.menu a {
+    color: #ffffff;
     text-decoration: none;
-    display: block;
-    color: black;
-    padding: 4px 0 4px 8px;
-}
-
-#jumpman {
-    float: right;
-    max-width: 15%;
+    margin: 20px;
     padding: 10px 10px 10px 10px;
+    display: inline-block;
 }
 
 fieldset {
@@ -125,11 +119,11 @@ table {
     border-collapse: collapse;
 }
 
-td{
+td {
     border-width: 1px;
-    padding:8px;
+    padding: 8px;
     border-style: solid;
-    border-color:#3A3A3A;
+    border-color: #3A3A3A;
 }
 
 tr:nth-child(even) {
@@ -137,20 +131,45 @@ tr:nth-child(even) {
 }
 
 .playertable {
+    height: 450px;
     overflow-x: auto;
 }
 
-.round{
-    display:inline-block;
+#logo {
+    height: 75px;
+}
+
+#logo:hover {
+    background-color: orange;
+}
+
+.index {
+    background-color: black;
+    opacity: .75;
+    color: aliceblue;
+    padding: 3px;
+    margin-top: 40px;
+    margin-right: 5px;
+    border: solid 10px;
+    border-color: dimgrey;
+}
+
+.round {
+    display: inline-block;
     opacity: 0.5;
 }
 
-.contains{
-    text-align:center;
+.contains {
+    text-align: center;
     margin-left: 10%;
     margin-right: 10%;
 }
 
 .round:hover {
     opacity: 1.0;
+}
+
+.news {
+    background-color: aliceblue;
+    opacity: 1;
 }

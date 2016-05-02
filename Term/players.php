@@ -34,7 +34,7 @@
                         } elseif($_GET['field']=='FGA') {
                             $field="playerstats.FGA ";
                         } elseif($_GET['field']=='FG%') {
-                            $field="platerstats.`FG%` ";
+                            $field="playerstats.`FG%` ";
                         } elseif($_GET['field']=='3PM') {
                             $field="playerstats.3PM ";
                         } elseif($_GET['field']=='3PA') {

@@ -1,9 +1,9 @@
 <?php include('header.html'); ?>
     <div class="row">
         <div class="col-12 index">
-            <h1>Player Comparrison</h1>
+            <h1>Player Comparison</h1>
 
-            <p> The Player Comparrison feature is a tool that allows users to compare players head to head and get a better feel for the players they want. Going to add a lot more here in the morning when I can look at the comparrison page.</p>
+            <p> The Player Comparison feature is a tool that allows users to compare players head to head and get a better feel for the players they want. Going to add a lot more here in the morning when I can look at the comparrison page.</p>
         </div>
     </div>
     <div class="row">

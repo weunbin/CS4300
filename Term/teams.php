@@ -1,4 +1,4 @@
-<?php include '/header.html' ?>
+<?php include 'header.html' ?>
 <div class="row">
     <div class="col-12">
 <form method="post" action="teams.php">
@@ -261,4 +261,4 @@
 </div>
 <br>
 
-<?php include '/footer.html' ?>
+<?php include 'footer.html' ?>
